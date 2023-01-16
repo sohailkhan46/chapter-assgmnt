@@ -1,0 +1,144 @@
+Exercise 1: Woof Woof 
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def woof(self):
+        print(f"{self.name} the dog says: Woof!")
+
+# Create two objects
+dog1 = Dog("Max", 5)
+dog2 = Dog("Buddy", 10)
+
+# Print out data from each object
+print(f"{dog1.name} is {dog1.age} years old")
+print(f"{dog2.name} is {dog2.age} years old")
+
+dog2.woof()
+
+Exercise 2: Student Class
+
+class Students(): 
+    def __init__(self, name, mark1, mark2, mark3):
+        self.name = name
+        self.mark1 = mark1
+        self.mark2 = mark2
+        self.mark3 = mark3
+        
+    def calcGrade(self):
+        return (self.mark1 + self.mark2 + self.mark3)/3 
+    
+    def display(self):
+        print("Name:", self.name)
+        print("Average Grade:", self.calcGrade())
+        
+name = input("Enter Student Name: ")
+mark1 = int(input("Enter Mark 1: ")) 
+mark2 = int(input("Enter Mark 2: "))
+mark3 = int(input("Enter Mark 3: "))
+
+student1 = Students(name, mark1, mark2, mark3)
+student1.display()
+
+Exercise 3 :Employee Class
+
+class Employee:
+  def __init__(self):
+    self.name = ''
+    self.age = 0
+    self.id = 0
+    self.salary = 0
+  
+  def setData(self):
+    self.name = input("Enter name: ")
+    self.age = int(input("Enter age: "))
+    self.id = int(input("Enter id: "))
+    self.salary = int(input("Enter salary: "))
+  
+  def getData(self):
+    print("Name: {}, age: {}, id: {}, salary: {}".format(self.name, self.age, self.id, self.salary))
+
+emp_object = []
+for i in range(5):
+  emp_object.append(Employee())
+  emp_object[i].setData()
+
+print("Name\t\tid\tAge\tSalary")
+for i in range(5):
+  emp_object[i].getData()
+  
+Exercise 4: Shapes
+
+class Shape:
+    def __init__(self):
+        self.sides = 0
+    def inputSides(self):
+        self.sides = int(input("Enter the number of sides:"))
+
+class Circle(Shape):
+    def __init__(self):
+        super().__init__()
+    def area(self):
+        return 3.14*self.sides**2
+
+class Rectangle(Shape):
+    def __init__(self):
+        super().__init__()
+    def area(self):
+        return self.sides*self.sides
+
+class Triangle(Shape):
+    def __init__(self):
+        super().__init__()
+    def area(self):
+        return (self.sides*self.sides*3**0.5)/4
+
+c = Circle()
+c.inputSides()
+print(c.area())
+
+r = Rectangle()
+r.inputSides()
+print(r.area())
+
+t = Triangle()
+t.inputSides()
+print(t.area())
+
+Optional Exercise 5: Playing around in class
+
+class Animal:
+    def __init__(self, type, name, colour, age, weight, noise):
+        self.type = type
+        self.name = name
+        self.colour = colour
+        self.age = age
+        self.weight = weight
+        self.noise = noise
+    
+    def sayHello(self):
+        print(self.name)
+        
+    def makeNoise(self):
+        print(self.noise)
+    
+    def animalDetails(self):
+        print('Type: ', self.type)
+        print('Name: ', self.name)
+        print('Colour: ', self.colour)
+        print('Age: ', self.age)
+        print('Weight: ', self.weight)
+        print('Noise: ', self.noise)
+
+dog = Animal('dog','Fido','black', 5, 15, 'woof')
+cow = Animal('cow', 'Bessie', 'brown', 4, 600, 'moo')
+
+dog.sayHello()
+dog.makeNoise()
+dog.animalDetails()
+
+cow.sayHello()
+cow.makeNoise()
+cow.animalDetails()
