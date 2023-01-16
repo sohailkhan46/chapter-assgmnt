@@ -1,1 +1,141 @@
+Exercise 1: Input List
 
+list_numbers = []
+#list creation 
+
+for i in range(5):
+#user input 
+
+    num = int(input("Please enter a number: "))
+    list_numbers.append(num)
+
+#displaying the list 
+print("The list of numbers is: ", list_numbers)
+
+Exercise 2: Integer List
+
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+for x in my_list:
+    print(x)
+
+print("Highest value in the list is: ", max(my_list))
+print("Lowest value in the list is: ", min(my_list))
+
+my_list.sort()
+print("List elements in ascending order: ", my_list)
+
+my_list.reverse()
+print("List elements in descending order: ", my_list)
+
+my_list.append(110)
+my_list.append(120)
+
+print("List after appending: ", my_list)
+
+Exercise 3 : Film Dictionary
+
+films = { 
+    #Creating Dictionary
+    'Titanic': {
+        'Director': 'James Cameron',
+        'Year': 1997,
+        'Runtime': '194 minutes'
+    },
+    'Avatar': {
+        'Director': 'James Cameron',
+        'Year': 2009,
+        'Runtime': '162 minutes'
+    },
+    'Inception': {
+        'Director': 'Christopher Nolan',
+        'Year': 2010,
+        'Runtime': '148 minutes'
+    }
+}
+#Displaying film details using loop
+for film, details in films.items():
+    print(f"{film}:")
+    for info, value in details.items():
+        print(f"{info}: {value}")
+    print()
+    
+Exercise 4: Year Tuples   
+
+year = (2017,2003,2011,2005,1987,2009,2020,2018,2009) 
+#Create a tuple with values
+
+#Access the value at index -3
+print("Value at index -3 :",year[-3])
+
+#Reverse the tuple and print the original tuple and reversed tuple
+print("Original Tuple :",year)
+print("Reversed Tuple :",year[::-1])
+
+#Count number of times 2009 is in the tuple (use count() method)
+print("Count number of times 2009 is in the tuple :",year.count(2009))
+
+#Get the index value of 2018(Use index method)
+print("Index value of 2018 :",year.index(2018))
+
+#Find length of given tuple(Use len() method)
+print("Length of given tuple :",len(year))
+
+ Exercise 5: Count items
+ 
+ staff = ["messi", "mbappe", "neymar", "mbappe", "salah","mane","neymar", "messi","haaland","neymar"]
+
+# creating an empty dictionary
+dict = {}
+
+# initializing the value of the key to 0
+for item in staff:
+    dict[item] = 0
+
+# iterating through the list and counting the number of times each item appears in the list
+for item in staff:
+    dict[item] += 1
+
+# printing the number of times each item appears in the list
+for key, value in dict.items():
+    print(key + " : " + str(value))
+    
+ 
+Optional Exercise 6: Locations List
+
+locations =['dubai','paris', 'switzerland', 'London', 'amsterdam', 'New York']
+print(locations)
+print("Length of the list is:", len(locations))
+
+print("Sorted list in alphabetical order:", sorted(locations))
+print("Original list:", locations)
+print("Sorted list in reverse alphabetical order:", sorted(locations, reverse=True))
+print("Original list:", locations)
+
+locations.reverse()
+print("Reversed list:", locations)
+
+Optional Exercise 7:Cities Dictionary
+
+cities = {
+    'New York': {
+        'country': 'United States',
+        'population': 8336817,
+        'fact': 'It has the most skyscrapers in the world.'
+    },
+    'Paris': {
+        'country': 'France',
+        'population': 2141000,
+        'fact': 'It is known as the City of Lights.'
+    },
+    'Cairo': {
+        'country': 'Egypt',
+        'population': 9755300,
+        'fact': 'It is the largest city in the Middle East.'
+    }
+}
+
+for city, info in cities.items():
+    print(city + ":")
+    for key, value in info.items():
+        print("\t" + key + ": " + str(value))
