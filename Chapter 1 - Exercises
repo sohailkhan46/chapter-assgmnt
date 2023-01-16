@@ -1,0 +1,146 @@
+Exercise 1: print
+
+print("Python uses 'interpreter' to convert source code into machine code")  
+print("Interpreter 'translates' program one statement at a time.")
+
+Exercise 2: Constant variable PI
+
+print("write the radius of circle")
+rad = float(input())
+pi = 3.14 #what is pi equal to
+cir = 2*pi*rad #answer the full equation
+print("\nThe circumference is:",cir)
+1
+
+Exercise 3 a: User Input Output
+
+name = input("What is your name: ")
+age = input("What is your age: ")
+hometown = input("What is your hometown: ")
+
+print(f"My name is {name}, I am {age} years old and I'm from {hometown}.")
+
+Exercise 3 b: User Input Output 
+
+name = input("Please enter your name:")
+age = int(input("Please enter your age:"))
+
+name_length = len(name)
+name_age_year = age + 1
+
+print("Your name is:", name.title())
+print("The length of your name is:", name_length)
+print("Your age is:", age)
+print("Your age after one year will be:", name_age_year)
+
+Exercise 4: Number Input Output 
+
+# Get user input
+num1 = int(input("Input first number: "))
+num2 = int(input("Input second number: "))
+num3 = int(input("Input third number: "))
+
+# Print the numbers forwards
+print("Forwards: %d, %d, %d" % (num1, num2, num3))
+
+# Print the numbers reversed
+print("Reversed: %d, %d, %d" % (num3, num2, num1))
+
+Exercise 5: Maths 
+
+print("This program evaluates the following calculations for two int numbers obtained from the user and outputs the results to the console:")
+
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+
+print("The sum of the two numbers is:", a + b)
+print("The difference of the two numbers is:", a - b)
+print("The product of the two numbers is:", a * b)
+print("The quotient of the two numbers is:", a / b)
+print("The remainder of the two numbers is:", a % b)
+
+Exercise 6: Is it Triangle 
+
+print('Please enter the lengths of the three sides of a triangle: ') 
+side1 = int(input('Side 1:')) 
+side2 = int(input('Side 2:')) 
+side3 = int(input('Side 3:'))
+# Ask user to input lengths of 3 sides of a triangle
+
+if side1 + side2 >= side3 and side1 + side3 >= side2 and side2 + side3 >= side1: 
+    # Check if lengths satisfy triangle inequality theorem
+
+    print('Valid triangle') 
+    # Check for type of triangle
+    if side1 == side2 == side3:
+        print('Equilateral triangle')
+    elif side1 == side2 or side1 == side3 or side2 == side3:
+        print('Isosceles triangle')
+    else:
+        print('Scalene triangle')
+else:
+    print('Not a valid triangle')
+    
+Exercise 7: Is it Even?
+
+num = int(input("Enter a number: "))
+# using Ternary operator
+print("The number is even." if (num % 2 == 0) else "The number is odd.")
+
+Exercise 8: Largest Number
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+z = int(input("Enter third number: "))
+# The Ternary Operator
+
+largest = x if (x > y and x > z) else (y if (y > x and y > z) else z) 
+print("The largest number is: ", largest) 
+
+
+# The multiple if -else operator
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+z = int(input("Enter third number: "))
+
+if (x > y and x > z):
+    largest = x
+elif (y > x and y > z):
+    largest = y
+else:
+    largest = z
+
+print("The largest number is: ", largest)
+
+Exercise 9: continue 
+
+print("Would you like to continue? (Yes/No)")
+cont = input()
+num_loops = 0
+
+while cont == "Y":
+    num_loops += 1
+    print("Would you like to continue? (Yes/No)")
+    cont = input()
+
+print("The loop executed " + str(num_loops) + " times")
+
+Exercise 10: FizzBuzz
+
+for num in range(1,101):
+        if num % 3 == 0 and num % 5 == 0:
+            print('FizzBuzz')
+        elif num % 3 == 0:
+            print('Fizz')
+        elif num % 5 == 0:
+            print('Buzz')
+        else:
+            print(num)
+            
+Exercise 11: Even Numbers
+
+for num in range(1, 101):
+    if num % 2 != 0:
+        continue
+    else:
+        print(num)
