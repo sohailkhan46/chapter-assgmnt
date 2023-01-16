@@ -1,0 +1,165 @@
+Exercise 1: Format Name
+
+def fullName(first_name, last_name): 
+    formatted_name = first_name + ' ' + last_name 
+    return formatted_name 
+      
+# User input 
+first_name = input("Enter first name : ") 
+last_name = input("Enter last name : ") 
+  
+# Function call 
+print(fullName(first_name, last_name))
+
+Exercise 2: Sum Function
+
+value1 = float(input("Enter first value: "))
+value2 = float(input("Enter second value: "))
+
+# Calculate and display the sum
+sum = value1 + value2
+print("The sum of the two values is:", sum)
+
+Exercise 3: Area Function
+
+def area_square():
+    side = float(input("Enter the length of side: "))
+    area = side * side
+    print("The area of the square is:", area)
+
+# A function to calculate the area of a circle
+def area_circle():
+    radius = float(input("Enter the radius of the circle: "))
+    area = 3.14 * radius * radius
+    print("The area of the circle is:", area)
+
+# A function to calculate the area of a triangle
+def area_triangle():
+    base = float(input("Enter the base of the triangle: "))
+    height = float(input("Enter the height of the triangle: "))
+    area = 0.5 * base * height
+    print("The area of the triangle is:", area)
+
+# Main program
+print("Menu:")
+print("1: Calculate the area of a square")
+print("2: Calculate the area of a circle")
+print("3: Calculate the area of a triangle")
+choice = int(input("Enter your choice: "))
+
+if choice == 1:
+    area_square()
+elif choice == 2:
+    area_circle()
+elif choice == 3:
+    area_triangle()
+else:
+    print("Invalid choice")
+    
+Exercise 4: Calculator Function
+
+print("Select an operation from the following:")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+print("5. Modulus")
+
+choice = int(input("Enter your choice: "))
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+if choice == 1:
+   print(num1,"+",num2,"=", (num1 + num2))
+elif choice == 2:
+   print(num1,"-",num2,"=", (num1 - num2))
+elif choice == 3:
+   print(num1,"*",num2,"=", (num1 * num2))
+elif choice == 4:
+   print(num1,"/",num2,"=", (num1 / num2))
+elif choice == 5:
+   print(num1,"%",num2,"=", (num1 % num2))
+else:
+   print("Invalid choice")
+
+perform_again = input("Do you want to perform another calculation (y/n): ")
+
+if perform_again == 'y':
+   # Recall the program
+   print("Select an operation from the following:")
+   print("1. Add")
+   print("2. Subtract")
+   print("3. Multiply")
+   print("4. Divide")
+   print("5. Modulus")
+
+elif perform_again == 'n':
+   print("bye!")
+
+else:
+   print("Invalid input")
+   
+
+Exercise 5: Product of list items
+ 
+def calculate_product(lst):
+  product = 1
+  for num in lst:
+    product *= num
+  return product
+
+my_list = [3, 5, 7, 9]
+
+result = calculate_product(my_list)
+
+print(f"The product of the list values is {result}")
+
+Exercise 6: Exercise – Factorial
+
+def factorial(n): 
+   if n == 1: 
+       return n 
+   else: 
+       return n*factorial(n-1) 
+
+num = int(input("Enter a number: ")) 
+
+if num < 0: 
+   print("Sorry, factorial does not exist for negative numbers") 
+elif num == 0: 
+   print("The factorial of 0 is 1") 
+else: 
+   print("The factorial of",num,"is",factorial(num))
+   
+Exercise 7: Lamda function
+
+marks = [("CodeLab I",67),("web Development", 75),("CodeLabII",74),("Smartphone Apps",68),
+        ("Games Development",70),("Responsive web",65)] 
+#low to high
+low_to_high = sorted(marks, key = lambda x: x[1]) 
+print("Low to High:", low_to_high) 
+
+#high to low
+high_to_low = sorted(marks, key = lambda x: x[1], reverse = True) 
+print("High to Low:", high_to_low)
+
+Optional Exercise 8: Count characters
+
+word = input("Enter a word: ")
+vowels = 0
+consonants = 0
+special_characters = 0
+
+for char in word:
+    if char in "aeiouAEIOU":
+        vowels +=1
+    elif char in "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ":
+        consonants +=1
+    else:
+        special_characters +=1
+        
+print("Total number of letters: ",len(word))
+print("Number of vowels: ", vowels)
+print("Number of consonants: ", consonants)
+print("Number of special characters: ", special_characters)
