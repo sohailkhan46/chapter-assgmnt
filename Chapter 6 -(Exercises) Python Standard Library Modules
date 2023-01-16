@@ -1,0 +1,172 @@
+Exercise 1: Basic Math
+
+#Ceil of a
+import math
+ceil_a=math.ceil(2.3)
+print(ceil_a)
+
+#Floor of a
+import math
+floor_a=math.floor(2.3)
+print(floor_a)
+
+#Factorial of a
+import math
+factorial_a =math.factorial(5)
+print(factorial_a)
+
+#Value of 23
+value_23=23
+
+#square root of a
+sqrt_a=math.sqrt(16)
+print(sqrt_a)
+
+Exercise 2: Numpy Array
+
+a = [20,23,82,40,32,15,67,52]
+# Find the indices of even numbers
+
+even_indices =[i for i, x in enumerate(a)if x % 2 == 0]
+print(even_indices)
+
+# Sort the array
+a.sort()
+
+# Slice elements from index 3 to the end of the array
+slice_1= a[3:]
+print(slice_1)
+
+# Slice elements from index 0 to index 4
+slice_2 = a[:4]
+print(slice_2)
+
+# Print [32, 15, 67] using negative slicing
+slice_3 = a[-5:-2]
+print(slice_3)
+
+Exercise 3: Calculator
+
+print("Calculator Menu")
+print("1. Add")
+print("2. Subtract")
+print("3. Multiply")
+print("4. Divide")
+print("5. Modulus")
+print("6. Check greater number")
+
+choice = int(input("Please select an operation (1-6): "))
+
+if choice == 1:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  result = num1 + num2
+  print("The result is:", result)
+elif choice == 2:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  result = num1 - num2
+  print("The result is:", result)
+elif choice == 3:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  result = num1 * num2
+  print("The result is:", result)
+elif choice == 4:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  result = num1 / num2
+  print("The result is:", result)
+elif choice == 5:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  result = num1 % num2
+  print("The result is:", result)
+elif choice == 6:
+  num1 = int(input("Enter the first number: "))
+  num2 = int(input("Enter the second number: "))
+  if num1 > num2:
+    print("The greater number is:", num1)
+  else:
+    print("The greater number is:", num2)
+else:
+  print("Invalid input.")
+
+# Extension Problem
+
+choice = 0
+while choice != 'Q':
+  print("Calculator Menu")
+  print("1. Add")
+  print("2. Subtract")
+  print("3. Multiply")
+  print("4. Divide")
+  print("5. Modulus")
+  print("6. Check greater number")
+
+  choice = input("Please select an operation (1-6) or enter Q to quit: ").upper() 
+  if choice == 'Q':
+    break
+  else:
+    choice = int(choice)
+  if choice == 1:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 + num2
+    print("The result is:", result)
+  elif choice == 2:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 - num2
+    print("The result is:", result)
+  elif choice == 3:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 * num2
+    print("The result is:", result)
+  elif choice == 4:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 / num2
+    print("The result is:", result)
+  elif choice == 5:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 % num2
+    print("The result is:", result)
+  elif choice == 6:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    if num1 > num2:
+      print("The greater number is:", num1)
+    else:
+      print("The greater number is:", num2)
+  else:
+    print("Invalid input.")
+    
+Exercise 4: Stack bar graph
+
+#Create a dictionary to store the results
+super_bowl_results ={
+"Male": {
+"Game": 279,
+"Commercials": 81,
+"Won't Watch": 132
+},
+ "Female":{
+ "Game" : 200,
+ "Commercials" : 156,
+ "Won't Watch": 160
+},
+"Total": {
+"Game": 479,
+"Commercials": 237,
+"Won't Watch": 292
+  }
+}
+
+#Print out the total number of people who said they would watch the game
+print("The total number of people who said they would watch the game is:", 
+super_bowl_results ["Total"]["Game"])
+    
+    
