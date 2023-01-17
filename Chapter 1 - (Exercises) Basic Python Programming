@@ -150,3 +150,29 @@ for num in range(1, 101):
         continue
     else:
         print(num)
+        
+ Optional Exercise 12: Count seconds
+ 
+ days = int(input("Enter number of days: "))
+hours = days*24
+
+minutes = hours*60
+seconds = minutes*60
+print("Number of seconds in",days,"days is",seconds)
+
+Optional Exercise 13: Sum of Digits in a Number
+
+num = int(input("Enter a number: "))
+sum = 0 
+while num > 0:
+    remainder = num % 10
+    sum = sum + remainder
+    num = num // 10
+print("Sum of digits of the number is: ", sum)
+
+Optional Exercise 14: Print Pattern
+
+for i in range (1, 6): 
+    for j in range (1, i+1): 
+        print(j, end = " ") 
+    print()
