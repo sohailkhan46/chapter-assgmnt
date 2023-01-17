@@ -5,12 +5,18 @@ print("Interpreter 'translates' program one statement at a time.")
 
 Exercise 2: Constant variable PI
 
-print("write the radius of circle")
-rad = float(input())
-pi = 3.14 #what is pi equal to
-cir = 2*pi*rad #answer the full equation
-print("\nThe circumference is:",cir)
-1
+radius = float(input('Enter the radius of the circle: '))
+
+PI = 3.14159
+
+# Calculate the circumference
+circumference = PI * radius * 2
+
+# Calculate the area
+area = PI * radius * radius
+
+print("The circumference is:", circumference)
+print("The area is:", area)
 
 Exercise 3 a: User Input Output
 
